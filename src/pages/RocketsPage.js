@@ -6,6 +6,7 @@ import { getRockets } from '../redux/rockets/rocketsSlice';
 function RocketsPage() {
   const { rockets } = useSelector((state) => state.rockets);
   const dispatch = useDispatch();
+
   useEffect(() => {
     dispatch(getRockets());
   }, [dispatch]);
