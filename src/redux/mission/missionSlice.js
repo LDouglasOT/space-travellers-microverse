@@ -26,41 +26,38 @@ const missionsSlice = createSlice({
   name: 'missions',
   initialState,
   reducers: {
-    joinMission: (state, action) => {
-      const { id } = action.payload;
-      const newState = state.missions.map((mission) => {
-        if (`${mission.mission_id}` !== id) return mission;
-        return { ...mission, active: true };
-      });
-
-      state.missions = newState;
-    },
-    leaveMission: (state, action) => {
-      const { id } = action.payload;
-      const newState = state.missions.map((mission) => {
-        if (`${mission.mission_id}` !== id) return mission;
-        return { ...mission, active: false };
-      });
-
-      state.missions = newState;
-    },
+    joinMission: (state, action) => ({
+      ...state,
+      missions: state.missions.map((mission) =>
+        `${mission.mission_id}` !== action.payload.id
+          ? mission
+          : { ...mission, active: true }),
+    }),
+    leaveMission: (state, action) => ({
+      ...state,
+      missions: state.missions.map((mission) =>
+        `${mission.mission_id}` !== action.payload.id
+          ? mission
+          : { ...mission, active: false }),
+    }),
   },
   extraReducers: (builder) => {
     // get missions
     builder
-      .addCase(getMissions.pending, (state) => {
-        state.isLoading = true;
-      })
-      .addCase(getMissions.fulfilled, (state, action) => {
-        state.isLoading = false;
-        const res = action.payload;
-
-        state.missions = res;
-      })
-      .addCase(getMissions.rejected, (state) => {
-        state.isLoading = false;
-        state.missions = [];
-      });
+      .addCase(getMissions.pending, (state) => ({
+        ...state,
+        isLoading: true,
+      }))
+      .addCase(getMissions.fulfilled, (state, action) => ({
+        ...state,
+        isLoading: false,
+        missions: action.payload,
+      }))
+      .addCase(getMissions.rejected, (state) => ({
+        ...state,
+        isLoading: false,
+        missions: [],
+      }));
   },
 });
 
