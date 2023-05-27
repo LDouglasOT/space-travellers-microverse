@@ -1,76 +1,102 @@
-<!-- TABLE OF CONTENTS -->
+<a name="readme-top"></a>
+
+<div align="center">
+
+  
+  <br/>
+
+  <h3><b>React group App</b></h3>
+
+</div>
+
 
 # 📗 Table of Contents
 
-- [📗 Table of Contents](#table-of-contents)
-- [Todo list App -- with Webpack ](#todo-list-app--with-webpack)
-  - [🛠 Built With ](#built-with)
-    - [Key Features ](#key-features)
-  - [Getting Started ](#getting-started)
-    - [Install ](#install)
-  - [Author ](#author)
-  - [🤝 Contributing ](#contributing)
-  - [Show your support ](#show-your-support)
-  - [Acknowledgments ](#acknowledgments)
-  - [📝 License ](#license)
+- [📖 About the Project](#about-project)
+  - [🛠 Built With](#built-with)
+    - [Tech Stack](#tech-stack)
+    - [Key Features](#key-features)
+  - [🚀 Live Demo](#live-demo)
+- [💻 Getting Started](#getting-started)
+  - [Setup](#setup)
+  - [Prerequisites](#prerequisites)
+  - [Install](#install)
+  - [Usage](#usage)
+  - [Run tests](#run-tests)
+- [👥 Authors](#authors)
+- [🔭 Future Features](#future-features)
+- [🤝 Contributing](#contributing)
+- [⭐️ Show your support](#support)
+- [🙏 Acknowledgements](#acknowledgements)
+- [❓ FAQ](#faq)
+- [📝 License](#license)
 
 <!-- PROJECT DESCRIPTION -->
 
-# Space Traveler Capstone Project <a name="todo-list-app--with-webpack"></a>
+# 📖 [React-group-project] <a name="about-project"></a>
 
-We build this project using React and Redux. We also consumed external API data using createAsyncThunk and extraReducers in respective redux slices.
+
+**[React-group-project]]** 
+-This project is a travel space app for travelling and booking rockets
 
 ## 🛠 Built With <a name="built-with"></a>
 
-- React
-- Redux
+<details>
+<summary>Client</summary>
+  <ul>
+    <li>React</li>
+  </ul>
+</details>
 
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
 
-> Key features of the application include the feature to:
 
-- **View Rockets.**
-- **View Missions.**
-- **Reserve Rocket.**
-- **Cancel Reservation**
-- **Join Mission**
-- **Leave Mission**
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+ - Booking Rockets and missions
+
 
 <!-- GETTING STARTED -->
 
-## Getting Started <a name="getting-started"></a>
+## 💻 Getting Started <a name="getting-started"></a>
 
-To get a local copy up and running follow these simple example steps.
 
-### Install <a name="install"></a>
+### Prerequisites
 
-```js
-npm install
-```
+In order to run this project you need:
 
-To build a webpack bundle file,run
+- install node on your computer
+- IDE
+- git
 
-```js
-npm run build
-```
 
-To start the project, run
+### Setup
 
-```js
-npm start
-```
+Clone this repository to your desired folder:
+- Clone the repository `git clone https://github.com/Daniel-Kigozi/react-group-project.git`
+- Run `cd react-group-project`
 
-You might also want to the local server automatically restarted for you any time you change any file in src folder. To activate that, open another terminal beside the the one running **npm start** and run the following command. Ensure to keep the terminal running:
 
-```js
-npm run watch
-```
+### Install
 
-## Authors <a name="author"></a>
+Install this project with:
+- Run `npm install`
+
+### Usage
+
+To run the project, execute the following command:
+- `npm start`
+
+### Test
+
+To test the project, execute the following command:
+- `npm test`
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- AUTHORS -->
 
 👤 **Doiglas Luzinda**
 
@@ -78,24 +104,46 @@ npm run watch
 - Twitter: [@twitterhandle]()
 - LinkedIn: [LinkedIn]()
 
+
+🔭 **Future Features**
+- Have more pages
+
+
+<!-- CONTRIBUTING -->
+
 ## 🤝 Contributing <a name="contributing"></a>
 
 Contributions, issues, and feature requests are welcome!
 
 Feel free to check the [issues page](../../issues/).
 
-## Show your support <a name="support"></a>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-Give a ⭐️ if you like this project!
+<!-- SUPPORT -->
 
-## Acknowledgments <a name="acknowledgements"></a>
+## ⭐️ Show your support <a name="support"></a>
 
-- Hat tip to anyone who inspired this project
+
+If you like this project, please do share it
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- ACKNOWLEDGEMENTS -->
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+
+I would like to give thanks to Microverse.
+
+<!-- FAQ (optional) -->
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LICENSE -->
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./MIT.md) licensed.
+This project is [MIT](https://github.com/Daniel-Kigozi/Mobile-First/blob/my-html/LICENSE.md) licensed.
 
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
-
-<a name="readme-top"></a>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
