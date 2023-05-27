@@ -6,7 +6,6 @@
 - [Todo list App -- with Webpack ](#todo-list-app--with-webpack)
   - [🛠 Built With ](#built-with)
     - [Key Features ](#key-features)
-  - [🚀 Live Demo ](#live-demo)
   - [Getting Started ](#getting-started)
     - [Install ](#install)
   - [Author ](#author)
