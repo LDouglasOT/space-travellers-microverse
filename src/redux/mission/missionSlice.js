@@ -1,21 +1,20 @@
-/* eslint-disable no-param-reassign */
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import axios from "axios";
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import axios from 'axios';
 
-const API_URL = "https://api.spacexdata.com/v3/missions";
+const API_URL = 'https://api.spacexdata.com/v3/missions';
 
 export const getMissions = createAsyncThunk(
-  "missions/getMissions",
+  'missions/getMissions',
   async (_, thunkAPI) => {
     try {
       const res = await axios(`${API_URL}`);
       return res.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(
-        error?.data?.message || "Something went wrong!"
+        error?.data?.message || 'Something went wrong!',
       );
     }
-  }
+  },
 );
 
 const initialState = {
@@ -24,44 +23,41 @@ const initialState = {
 };
 
 const missionsSlice = createSlice({
-  name: "missions",
+  name: 'missions',
   initialState,
   reducers: {
-    joinMission: (state, action) => {
-      const { id } = action.payload;
-      const newState = state.missions.map((mission) => {
-        if (`${mission.mission_id}` !== id) return mission;
-        return { ...mission, active: true };
-      });
-
-      state.missions = newState;
-    },
-    leaveMission: (state, action) => {
-      const { id } = action.payload;
-      const newState = state.missions.map((mission) => {
-        if (`${mission.mission_id}` !== id) return mission;
-        return { ...mission, active: false };
-      });
-
-      state.missions = newState;
-    },
+    joinMission: (state, action) => ({
+      ...state,
+      missions: state.missions.map((mission) =>
+        `${mission.mission_id}` !== action.payload.id
+          ? mission
+          : { ...mission, active: true }),
+    }),
+    leaveMission: (state, action) => ({
+      ...state,
+      missions: state.missions.map((mission) =>
+        `${mission.mission_id}` !== action.payload.id
+          ? mission
+          : { ...mission, active: false }),
+    }),
   },
   extraReducers: (builder) => {
     // get missions
     builder
-      .addCase(getMissions.pending, (state) => {
-        state.isLoading = true;
-      })
-      .addCase(getMissions.fulfilled, (state, action) => {
-        state.isLoading = false;
-        const res = action.payload;
-
-        state.missions = res;
-      })
-      .addCase(getMissions.rejected, (state) => {
-        state.isLoading = false;
-        state.missions = [];
-      });
+      .addCase(getMissions.pending, (state) => ({
+        ...state,
+        isLoading: true,
+      }))
+      .addCase(getMissions.fulfilled, (state, action) => ({
+        ...state,
+        isLoading: false,
+        missions: action.payload,
+      }))
+      .addCase(getMissions.rejected, (state) => ({
+        ...state,
+        isLoading: false,
+        missions: [],
+      }));
   },
 });
 

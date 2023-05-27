@@ -1,21 +1,20 @@
-/* eslint-disable no-param-reassign */
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import axios from "axios";
+import axios from 'axios';
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
-const API_URL = "https://api.spacexdata.com/v3/rockets";
+const API_URL = 'https://api.spacexdata.com/v3/rockets';
 
 export const getRockets = createAsyncThunk(
-  "rockets/getRockets",
+  'rockets/getRockets',
   async (_, thunkAPI) => {
     try {
       const res = await axios(`${API_URL}`);
       return res.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(
-        error?.data?.message || "Something went wrong!"
+        error?.data?.message || 'Something went wrong!',
       );
     }
-  }
+  },
 );
 
 const initialState = {
@@ -24,26 +23,22 @@ const initialState = {
 };
 
 const rocketsSlice = createSlice({
-  name: "rockets",
+  name: 'rockets',
   initialState,
   reducers: {
     reserveRocket: (state, action) => {
       const { id } = action.payload;
-      const newState = state.rockets.map((rocket) => {
-        if (`${rocket.id}` !== id) return rocket;
-        return { ...rocket, reserved: true };
-      });
-
-      state.rockets = newState;
+      const rocket = state.rockets.find((rocket) => `${rocket.id}` === id);
+      if (rocket) {
+        rocket.reserved = true;
+      }
     },
     cancelRocketReservation: (state, action) => {
       const { id } = action.payload;
-      const newState = state.rockets.map((rocket) => {
-        if (`${rocket.id}` !== id) return rocket;
-        return { ...rocket, reserved: false };
-      });
-
-      state.rockets = newState;
+      const rocket = state.rockets.find((rocket) => `${rocket.id}` === id);
+      if (rocket) {
+        rocket.reserved = false;
+      }
     },
   },
   extraReducers: (builder) => {
@@ -54,9 +49,7 @@ const rocketsSlice = createSlice({
       })
       .addCase(getRockets.fulfilled, (state, action) => {
         state.isLoading = false;
-        const res = action.payload;
-
-        state.rockets = res;
+        state.rockets = action.payload;
       })
       .addCase(getRockets.rejected, (state) => {
         state.isLoading = false;

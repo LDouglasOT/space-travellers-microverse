@@ -38,7 +38,8 @@
     "operator-linebreak": "off",
     "dot-notation": "off",
     "camelcase": "off",
-    
+    "no-param-reassign": "off",
+      
     // Disable props validation
     "react/prop-types": "off",
     
