@@ -81,14 +81,34 @@ header {
   flex: 2;
 }
 
-.reserve-btn {
+.reserve-btn,
+.cancel-reservation-btn {
   padding: 10px 20px;
   cursor: pointer;
   border: none;
-  background-color: #007bff;
   color: #fff;
   font-size: 16px;
   font-family: inherit;
   border-radius: 4px;
   margin-top: 10px;
+}
+
+.reserve-btn {
+  background-color: #007bff;
+  border: solid 1px #007bff;
+}
+
+.cancel-reservation-btn {
+  background-color: #ddd;
+  color: #585858;
+  border: 1px solid #585858;
+}
+
+.reserved-badge {
+  background-color: #007bff;
+  font-size: 14px;
+  padding: 3px;
+  border-radius: 3px;
+  color: #fff;
+  margin-right: 3px;
 }

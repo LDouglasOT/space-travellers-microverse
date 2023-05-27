@@ -1,11 +1,25 @@
-/* eslint-disable */ 
 import React from 'react';
+import { useDispatch } from 'react-redux';
+import { rocketsActions } from '../redux/rockets/rocketsSlice';
 
 function Rocket(props) {
   const {
-    description, rocket_id, rocket_name, flickr_images,
+    description, id, rocket_name, flickr_images, reserved,
   } = props.rocketData;
   const imageURL = flickr_images?.[0];
+  const dispatch = useDispatch();
+
+  const reserveHandler = (e) => {
+    const { id } = e.target.dataset;
+
+    dispatch(rocketsActions.reserveRocket({ id }));
+  };
+
+  const cancelHandler = (e) => {
+    const { id } = e.target.dataset;
+    dispatch(rocketsActions.cancelRocketReservation({ id }));
+  };
+
   return (
     <div className="rocket">
       <div className="rocket-img-wrapper">
@@ -13,10 +27,30 @@ function Rocket(props) {
       </div>
       <div className="rocket-details">
         <h3>{rocket_name}</h3>
-        <p>{description}</p>
-        <button type="button" className="reserve-btn" data-id={rocket_id}>
-          Reserve Rocket
-        </button>
+        <p>
+          {reserved && <span className="reserved-badge">Reserved</span>}
+          {description}
+        </p>
+        {!reserved && (
+          <button
+            type="button"
+            className="reserve-btn"
+            onClick={reserveHandler}
+            data-id={id}
+          >
+            Reserve Rocket
+          </button>
+        )}
+        {reserved && (
+          <button
+            type="button"
+            className="cancel-reservation-btn"
+            data-id={id}
+            onClick={cancelHandler}
+          >
+            Cancel Reservation
+          </button>
+        )}
       </div>
     </div>
   );
