@@ -1,10 +1,11 @@
-import React from "react";
-import { useDispatch } from "react-redux";
-import { rocketsActions } from "../redux/rockets/rocketsSlice";
+import React from 'react';
+import { useDispatch } from 'react-redux';
+import { rocketsActions } from '../redux/rockets/rocketsSlice';
 
 function Rocket(props) {
-  const { description, id, rocket_name, flickr_images, reserved } =
-    props.rocketData;
+  const {
+    description, id, rocket_name, flickr_images, reserved,
+  } = props.rocketData;
   const imageURL = flickr_images?.[0];
   const dispatch = useDispatch();
 

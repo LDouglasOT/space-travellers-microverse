@@ -3,11 +3,11 @@ import {
   createRoutesFromElements,
   Route,
   RouterProvider,
-} from "react-router-dom";
-import RootLayout from "./layout/RootLayout";
-import MissionsPage from "./pages/MissionsPage";
-import MyProfilePage from "./pages/MyProfilePage";
-import RocketsPage from "./pages/RocketsPage";
+} from 'react-router-dom';
+import RootLayout from './layout/RootLayout';
+import MissionsPage from './pages/MissionsPage';
+import MyProfilePage from './pages/MyProfilePage';
+import RocketsPage from './pages/RocketsPage';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -15,8 +15,8 @@ const router = createBrowserRouter(
       <Route index element={<RocketsPage />} />
       <Route path="missions" element={<MissionsPage />} />
       <Route path="my-profile" element={<MyProfilePage />} />
-    </Route>
-  )
+    </Route>,
+  ),
 );
 
 function App() {

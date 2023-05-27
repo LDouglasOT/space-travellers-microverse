@@ -1,14 +1,13 @@
-import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
 const {
   getMissions,
   missionsActions,
-} = require("../redux/mission/missionSlice");
+} = require('../redux/mission/missionSlice');
 
 function MissionsPage() {
   const { missions } = useSelector((state) => state.mission);
-  console.log("Nissions", missions);
 
   const dispatch = useDispatch();
   useEffect(() => {
