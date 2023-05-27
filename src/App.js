@@ -20,7 +20,7 @@ import MyProfilePage from './Page/MyProfilePage.js';
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<RootLayout />}>
-      {/* <Route index element={<RocketsPage />} /> */}
+      <Route index element={<RocketsPage />} />
       <Route path="missions" element={<MissionsPage />} />
       <Route path="my-profile" element={<MyProfilePage />} />
     </Route>,

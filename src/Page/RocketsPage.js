@@ -1,22 +1,24 @@
-import React, { useEffect } from 'react';
+// import React, { useEffect } from 'react';
 /* eslint-disable */
-import { useDispatch, useSelector } from 'react-redux';
-import Rocket from '../components/Rockets';
-import { getRockets } from '../redux/rocketsSlice';
+// import { useDispatch, useSelector } from 'react-redux';
+// import Rocket from '../components/Rockets';
+// import { getRockets } from '../redux/rocketsSlice';
 
 function RocketsPage() {
-  const { rockets } = useSelector((state) => state.rockets);
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(getRockets());
-  }, [dispatch]);
+  // const { rockets } = useSelector((state) => state.rockets);
+  // const dispatch = useDispatch();
+  // useEffect(() => {
+  //   dispatch(getRockets());
+  // }, [dispatch]);
 
   return (
     <main>
       <div className="rocket-list row">
-        {rockets.map((rocket) => (
+        {/* {rockets.map((rocket) => (
           <Rocket key={rocket.id} rocketData={rocket} />
-        ))}
+        ))} */}
+
+        <h3>hell</h3>
       </div>
     </main>
   );
