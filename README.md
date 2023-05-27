@@ -75,7 +75,7 @@ In order to run this project you need:
 ### Setup
 
 Clone this repository to your desired folder:
-- Clone the repository `git clone https://github.com/Daniel-Kigozi/react-group-project.git`
+- Clone the repository `git clone https://github.com/LDouglasOT/space-travellers-microverse/`
 - Run `cd react-group-project`
 
 
@@ -98,7 +98,7 @@ To test the project, execute the following command:
 
 <!-- AUTHORS -->
 
-👤 **Doiglas Luzinda**
+👤 **Douglas Luzinda**
 
 - GitHub: [@githubhandle](https://github.com/LDouglasOT)
 - Twitter: [@twitterhandle]()
@@ -144,6 +144,6 @@ I would like to give thanks to Microverse.
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](https://github.com/Daniel-Kigozi/Mobile-First/blob/my-html/LICENSE.md) licensed.
+This project is [MIT](./MIT.md) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
