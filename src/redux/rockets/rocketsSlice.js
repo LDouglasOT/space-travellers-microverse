@@ -1,21 +1,21 @@
 /* eslint-disable no-param-reassign */
-import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import axios from 'axios';
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import axios from "axios";
 
-const API_URL = 'https://api.spacexdata.com/v3/rockets';
+const API_URL = "https://api.spacexdata.com/v3/rockets";
 
 export const getRockets = createAsyncThunk(
-  'rockets/getRockets',
+  "rockets/getRockets",
   async (_, thunkAPI) => {
     try {
       const res = await axios(`${API_URL}`);
       return res.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(
-        error?.data?.message || 'Something went wrong!',
+        error?.data?.message || "Something went wrong!"
       );
     }
-  },
+  }
 );
 
 const initialState = {
@@ -24,7 +24,7 @@ const initialState = {
 };
 
 const rocketsSlice = createSlice({
-  name: 'rockets',
+  name: "rockets",
   initialState,
   reducers: {
     reserveRocket: (state, action) => {
