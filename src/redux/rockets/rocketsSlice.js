@@ -1,7 +1,7 @@
 /* eslint-disable no-param-reassign */
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
-/* eslint-disable */
+
 const API_URL = 'https://api.spacexdata.com/v3/rockets';
 
 export const getRockets = createAsyncThunk(
@@ -41,6 +41,7 @@ const rocketsSlice = createSlice({
       })
       .addCase(getRockets.rejected, (state) => {
         state.isLoading = false;
+        state.rockets = [];
       });
   },
 });
