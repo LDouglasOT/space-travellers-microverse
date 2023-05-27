@@ -1,70 +1,102 @@
-# Getting Started with Create React App
+<!-- TABLE OF CONTENTS -->
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 📗 Table of Contents
 
-## Available Scripts
+- [📗 Table of Contents](#table-of-contents)
+- [Todo list App -- with Webpack ](#todo-list-app--with-webpack)
+  - [🛠 Built With ](#built-with)
+    - [Key Features ](#key-features)
+  - [🚀 Live Demo ](#live-demo)
+  - [Getting Started ](#getting-started)
+    - [Install ](#install)
+  - [Author ](#author)
+  - [🤝 Contributing ](#contributing)
+  - [Show your support ](#show-your-support)
+  - [Acknowledgments ](#acknowledgments)
+  - [📝 License ](#license)
 
-In the project directory, you can run:
+<!-- PROJECT DESCRIPTION -->
 
-### `npm start`
+# Space Traveler Capstone Project <a name="todo-list-app--with-webpack"></a>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+We build this project using React and Redux. We also consumed external API data using createAsyncThunk and extraReducers in respective redux slices.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠 Built With <a name="built-with"></a>
 
-### `npm test`
+- React
+- Redux
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<!-- Features -->
 
-### `npm run build`
+### Key Features <a name="key-features"></a>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+> Key features of the application include the feature to:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **View Rockets.**
+- **View Missions.**
+- **Reserve Rocket.**
+- **Cancel Reservation**
+- **Join Mission**
+- **Leave Mission**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### `npm run eject`
+<!-- GETTING STARTED -->
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Getting Started <a name="getting-started"></a>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To get a local copy up and running follow these simple example steps.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Install <a name="install"></a>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```js
+npm install
+```
 
-## Learn More
+To build a webpack bundle file,run
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```js
+npm run build
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+To start the project, run
 
-### Code Splitting
+```js
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+You might also want to the local server automatically restarted for you any time you change any file in src folder. To activate that, open another terminal beside the the one running **npm start** and run the following command. Ensure to keep the terminal running:
 
-### Analyzing the Bundle Size
+```js
+npm run watch
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Authors <a name="author"></a>
 
-### Making a Progressive Web App
+👤 **Doiglas Luzinda**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- GitHub: [@githubhandle](https://github.com/LDouglasOT)
+- Twitter: [@twitterhandle]()
+- LinkedIn: [LinkedIn]()
 
-### Advanced Configuration
+## 🤝 Contributing <a name="contributing"></a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Contributions, issues, and feature requests are welcome!
 
-### Deployment
+Feel free to check the [issues page](../../issues/).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Show your support <a name="support"></a>
 
-### `npm run build` fails to minify
+Give a ⭐️ if you like this project!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Acknowledgments <a name="acknowledgements"></a>
+
+- Hat tip to anyone who inspired this project
+
+## 📝 License <a name="license"></a>
+
+This project is [MIT](./MIT.md) licensed.
+
+_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
+
+<a name="readme-top"></a>
