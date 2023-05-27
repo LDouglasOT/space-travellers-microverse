@@ -24,8 +24,7 @@ describe("MyProfilePage Component", () => {
       selector({
         rockets: { rockets: mockRockets },
         mission: { missions: mockMissions },
-      })
-    );
+      }));
   });
 
   afterEach(() => {
@@ -51,5 +50,4 @@ describe("MyProfilePage Component", () => {
     expect(reservedRocketFalcon9).toBeInTheDocument();
     expect(reservedRocketStarship).not.toBeInTheDocument();
   });
-
 });
