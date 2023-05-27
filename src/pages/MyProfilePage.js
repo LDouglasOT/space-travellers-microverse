@@ -12,9 +12,6 @@ const getReserved = (rocket) => {
   }
 
   return null;
-  // return (
-
-  // );
 };
 
 const getJoinedMission = (mission) => {
